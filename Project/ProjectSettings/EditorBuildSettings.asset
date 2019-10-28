@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu/MainMenu.unity
+    guid: e2f51d689a0b7d34ea87e983a9465ad0
+  - enabled: 1
+    path: Assets/Scenes/Main Menu/LoginMenu.unity
+    guid: 7177741c69560d248b40fdd22c7e9bed
+  - enabled: 1
+    path: Assets/Scenes/Main Menu/RegisterMenu.unity
+    guid: 49fa24d206ff03049838289d2141245a
+  - enabled: 1
+    path: Assets/Scenes/ConnectingLobby/Connectlobby.unity
+    guid: 601e4c804cf3db3419322511e195190c
+  - enabled: 1
+    path: Assets/Scenes/SelectRoom/Rooms.unity
+    guid: ae55155f26f6eb4409f60f6c9998733e
+  - enabled: 1
+    path: Assets/Scenes/GameMenu.unity
+    guid: 9e9b612a295eea340977874f961e9f84
+  - enabled: 1
+    path: Assets/Scenes/GameorModule/Module 1/Pick up cube & controller show.unity
+    guid: d6d84ae0436f7d9428add3719f1a3b37
+  - enabled: 1
+    path: Assets/Scenes/GameorModule/Module 2/Main.unity
+    guid: 3672ba727e42f784cac01a1eb3c31210
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: acf92ea06df31f64c9ec25063845fae7
+  m_configObjects: {}
