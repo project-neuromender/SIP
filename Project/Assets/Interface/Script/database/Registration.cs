@@ -32,7 +32,7 @@ public class Registration : MonoBehaviour
         if (e.target.name == "RegisterButton")
         {
             Debug.Log("Register was clicked");
-            Register();
+            CallRegister();
         }
     }
 
@@ -63,7 +63,7 @@ public class Registration : MonoBehaviour
         if (www.text == "0")
         {
             Debug.Log("User created successfully.");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("LoginMenu");
         }
 
         else
