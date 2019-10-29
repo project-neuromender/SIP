@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.socket.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\Users\\Nabilah Azelan\\Desktop\\Projectt\\Project\\actions.json",
+      "action_manifest_path": "D:\\Users\\Nabilah Azelan\\Documents\\SIP\\Project\\actions.json",
       "strings": {
         "en_us": {
           "name": "Project [Testing]"
