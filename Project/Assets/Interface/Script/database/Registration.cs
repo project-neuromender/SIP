@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Valve.VR;
+using Valve.VR.Extras;
+using Valve.VR.InteractionSystem;
 
 public class Registration : MonoBehaviour
 {
@@ -11,6 +14,37 @@ public class Registration : MonoBehaviour
 
     public Button submitButton;
     public Text playerDisplay;
+
+    public SteamVR_LaserPointer laserPointer;
+
+    void Awake()
+    {
+        laserPointer.PointerClick += PointerClick;
+    }
+
+    public void PointerClick(object sender, PointerEventArgs e)
+    {
+        if (e.target.name == "BackButton")
+        {
+            Debug.Log("Back button was clicked");
+            OnClick_ButtonBack();
+        }
+        if (e.target.name == "RegisterButton")
+        {
+            Debug.Log("Register was clicked");
+            Register();
+        }
+    }
+
+    public void VerifyInputs()
+    {
+        submitButton.interactable = (nameField.text.Length >= 8 && passwordField.text.Length >= 8);
+    }
+
+    public void OnClick_ButtonBack()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
     public void CallRegister()
     {
@@ -24,7 +58,7 @@ public class Registration : MonoBehaviour
         form.AddField("name", nameField.text);
         form.AddField("password", passwordField.text);
 
-        WWW www = new WWW("http://localhost/sqlconnect/Registration.php",form);
+        WWW www = new WWW("http://localhost/sqlconnect/Registration.php", form);
         yield return www;
         if (www.text == "0")
         {
@@ -37,15 +71,5 @@ public class Registration : MonoBehaviour
             Debug.Log("User creation failed. Error #" + www.text);
             playerDisplay.text = "User creation failed." + www.text;
         }
-    }
-
-    public void VerifyInputs()
-    {
-        submitButton.interactable = (nameField.text.Length >= 8 && passwordField.text.Length >= 8);
-    }
-
-    public void OnClick_ButtonBack()
-    {
-        SceneManager.LoadScene("MainMenu");
     }
 }
