@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Valve.VR.Extras;
+using Valve.VR.InteractionSystem;
 
 public class Login : MonoBehaviour
 {
@@ -11,6 +13,27 @@ public class Login : MonoBehaviour
 
     public Button submitButton;
     public Text playerDisplay;
+
+    public SteamVR_LaserPointer laserPointer;
+
+    void Awake()
+    {
+        laserPointer.PointerClick += PointerClick;
+    }
+
+    public void PointerClick(object sender, PointerEventArgs e)
+    {
+        if (e.target.name == "LoginButton")
+        {
+            Debug.Log("Login button clicked");
+            CallLogin();
+        }
+        else if (e.target.name == "BackButton")
+        {
+            Debug.Log("Going back");
+            OnClick_BackButton();
+        }
+    }
 
     public void CallLogin()
     {
