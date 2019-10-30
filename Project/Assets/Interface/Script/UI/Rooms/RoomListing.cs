@@ -16,24 +16,6 @@ public class RoomListing : MonoBehaviour
 
     private string roomname;
 
-    //public GameObject PanelTesting;
-
-
-    /*void Awake()
-    {
-        laserPointer.PointerClick += PointerClick;
-    }*/
-
-    /*public void PointerClick(object sender, PointerEventArgs e)
-    {
-        if (e.target.name == "ScrollView")
-        {
-            Debug.Log("Room Listing was clicked");
-            OnClick_Button();
-        }
-       
-    }*/
-
     public RoomInfo RoomInfo { get; private set; }
     
     public void SetRoomInfo(RoomInfo roomInfo)
