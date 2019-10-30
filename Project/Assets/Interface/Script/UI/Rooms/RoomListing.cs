@@ -14,6 +14,8 @@ public class RoomListing : MonoBehaviour
 
     public SteamVR_LaserPointer laserPointer;
 
+    private string roomname;
+
     //public GameObject PanelTesting;
 
 
@@ -22,7 +24,7 @@ public class RoomListing : MonoBehaviour
         laserPointer.PointerClick += PointerClick;
     }*/
 
-    public void PointerClick(object sender, PointerEventArgs e)
+    /*public void PointerClick(object sender, PointerEventArgs e)
     {
         if (e.target.name == "ScrollView")
         {
@@ -30,7 +32,7 @@ public class RoomListing : MonoBehaviour
             OnClick_Button();
         }
        
-    }
+    }*/
 
     public RoomInfo RoomInfo { get; private set; }
     
@@ -38,11 +40,19 @@ public class RoomListing : MonoBehaviour
     {
         RoomInfo = roomInfo;
         _text.text = roomInfo.MaxPlayers + " , " + roomInfo.Name;
+
+        roomname = RoomInfo.Name;
+
+        Debug.Log("Room Name : " + roomname);
     }
 
     public void OnClick_Button()
     {
-        PhotonNetwork.JoinRoom(RoomInfo.Name);
+        //Debug.Log("Room Name : " + RoomInfo.Name);
+        Debug.Log("Room Name : " + roomname);
+
+        Debug.Log("Joining room in the list");
+        PhotonNetwork.JoinRoom(roomname, null);
         Debug.Log("Room Listing Menu : Join Room");
     }
 }
