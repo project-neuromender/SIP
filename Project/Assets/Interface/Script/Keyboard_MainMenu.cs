@@ -677,7 +677,7 @@ public class Keyboard_MainMenu : MonoBehaviour
 
     public void BackSpace()
     {
-        if (PasswordCheck == true && UserNameCheck == false)
+        if (UserNameCheck == true && PasswordCheck == false)
         {
             if (Username.text.Length > 0) Username.text = Username.text.Remove(Username.text.Length - 1, 1);
         }
