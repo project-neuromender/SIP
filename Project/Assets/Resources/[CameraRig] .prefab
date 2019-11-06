@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poseAction:
     actionPath: /actions/default/in/Pose
-    needsReinit: 1
+    needsReinit: 0
   inputSource: 1
   origin: {fileID: 0}
   onTransformUpdated:
@@ -1497,7 +1497,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6243685412458551291}
+  m_GameObject: {fileID: 6243549618326542464}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6243685412458551291}
+  m_GameObject: {fileID: 6243549618326542464}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -1875,7 +1875,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6670941845953402861}
-  - {fileID: 6243685412458549867}
+  - {fileID: 6244297165660659728}
   - {fileID: 1600461509518281482}
   - {fileID: 8742500907303975640}
   m_Father: {fileID: 6670941845953402859}
@@ -1895,7 +1895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poseAction:
     actionPath: /actions/default/in/Pose
-    needsReinit: 1
+    needsReinit: 0
   inputSource: 2
   origin: {fileID: 0}
   onTransformUpdated:
@@ -2221,7 +2221,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6670941845953402863}
-  - {fileID: 8878974452422623628}
+  - {fileID: 8878356030080483006}
   - {fileID: 5104490642037584425}
   - {fileID: 90162588172345617}
   - {fileID: 4930944846241742903}
@@ -2242,7 +2242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poseAction:
     actionPath: /actions/default/in/Pose
-    needsReinit: 1
+    needsReinit: 0
   inputSource: 1
   origin: {fileID: 0}
   onTransformUpdated:
@@ -4050,7 +4050,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8878974452422624465}
+  m_GameObject: {fileID: 8879965665369444730}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -4072,7 +4072,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8878974452422624465}
+  m_GameObject: {fileID: 8879965665369444730}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
@@ -4419,13 +4419,13 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 114000012051789102, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
---- !u!1 &6243685412458551291 stripped
+--- !u!1 &6243549618326542464 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25,
     type: 3}
   m_PrefabInstance: {fileID: 6243685412458550954}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &6243685412458549867 stripped
+--- !u!4 &6244297165660659728 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012125075130, guid: 6def53d002137b747aec0b29551e0e25,
     type: 3}
@@ -4693,13 +4693,13 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 114000013038800862, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
---- !u!4 &8878974452422623628 stripped
+--- !u!4 &8878356030080483006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013303659494, guid: 638779290bce1af49b356f33dcc6fccf,
     type: 3}
   m_PrefabInstance: {fileID: 8878974452422624600}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8878974452422624465 stripped
+--- !u!1 &8879965665369444730 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf,
     type: 3}

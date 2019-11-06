@@ -12,6 +12,8 @@ public class Keyboard_Login : MonoBehaviour
     
     public SteamVR_LaserPointer laserPointer;
     string alphabet;
+    
+    public UnityEngine.UI.InputField passwordInput = null;
 
     public bool UserNameCheck;
     public bool PasswordCheck;
@@ -251,7 +253,30 @@ public class Keyboard_Login : MonoBehaviour
                 UserNameCheck = false;
                 PasswordCheck = true;
             }
-        }        
+        }
+        else if (e.target.name == "Button")
+        {
+            Debug.Log("Toogle Check!");
+            ToogleInputType();
+        }
+    }
+
+    public void ToogleInputType()
+    {      
+        if (this.passwordInput != null)
+        {            
+            if (this.passwordInput.contentType == InputField.ContentType.Password)
+            {
+
+                this.passwordInput.contentType = InputField.ContentType.Standard;
+            }
+            else
+            {
+                this.passwordInput.contentType = InputField.ContentType.Password;
+            }
+
+            this.passwordInput.ForceLabelUpdate();
+        }
     }
 
 
@@ -535,7 +560,7 @@ public class Keyboard_Login : MonoBehaviour
         }
         else if (PasswordCheck == true && UserNameCheck == false)
         {
-            Password.text = Password.text + "s";
+            Password.text = Password.text + "S";
             Password.caretPosition = (Password.text.Length) + 2;
         }
     }
@@ -677,7 +702,7 @@ public class Keyboard_Login : MonoBehaviour
 
     public void BackSpace()
     {
-        if (PasswordCheck == true && UserNameCheck == false)
+        if (UserNameCheck == true && PasswordCheck == false)
         {
             if (Username.text.Length > 0) Username.text = Username.text.Remove(Username.text.Length - 1, 1);
         }

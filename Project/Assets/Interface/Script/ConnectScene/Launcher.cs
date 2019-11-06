@@ -16,11 +16,13 @@ public class Launcher : MonoBehaviourPunCallbacks
     public Text Status;
     public Text _playerName;
 
+    //public Text playername;
+
     string roomName = "My Room";
     bool ShowGUI = true;
 
     public SteamVR_LaserPointer laserPointer;
-
+    
 
     public void OnClick_ConnectBtn()
     {
@@ -32,6 +34,8 @@ public class Launcher : MonoBehaviourPunCallbacks
         PhotonNetwork.GameVersion = _gameVersion;
         PhotonNetwork.ConnectUsingSettings();
     }
+
+    
 
     private void Awake()
     {
@@ -60,12 +64,15 @@ public class Launcher : MonoBehaviourPunCallbacks
         Status.text = "Connected to Self-hosted server.";
         Debug.Log("My Nickname is " + PhotonNetwork.LocalPlayer.NickName, this);
         Status.text = "My Nickname is " + PhotonNetwork.LocalPlayer.NickName;
+        
 
         if (!PhotonNetwork.InLobby)
         {
             PhotonNetwork.JoinLobby(TypedLobby.Default);
         }
     }
+
+    
 
     public override void OnDisconnected(DisconnectCause cause)
     {

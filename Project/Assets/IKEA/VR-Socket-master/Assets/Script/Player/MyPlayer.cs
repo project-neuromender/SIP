@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
+using UnityEngine.UI;
 
 public class MyPlayer : MonoBehaviourPunCallbacks, IPunObservable
 {
@@ -17,7 +18,22 @@ public class MyPlayer : MonoBehaviourPunCallbacks, IPunObservable
     Quaternion latestRot;
     private PhotonView PV;
 
+   // public Text PlayerName;
+
+    private string name;
+
+    //private PlayerInputField PlayerInputField;
+    //private Launcher launcher;
+
     #region MonoBehaviour CallBacks
+
+    public void Start()
+    {
+        name = PhotonNetwork.NickName;
+        Debug.Log("Player Name MyPlayer : " + name);
+
+        GameObject.Find("Button").GetComponentInChildren<Text>().text = name;
+    }
 
     // Start is called before the first frame update
     void Awake()

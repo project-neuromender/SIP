@@ -5,7 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using System;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviourPunCallbacks
 {
@@ -66,13 +66,15 @@ public class Manager : MonoBehaviourPunCallbacks
     [Tooltip("The prefab to use for representing the player")]
     public  GameObject playerPrefab;
     public Transform spawnPoint;
-   
-    
-    //public static Manager Instance;
 
     #endregion
 
     #region Public Methods
+
+    public void TransformParent(Transform newParent)
+    {
+        playerPrefab.transform.SetParent(newParent, false);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -83,21 +85,16 @@ public class Manager : MonoBehaviourPunCallbacks
             UnityEngine.SceneManagement.SceneManager.LoadScene("Connectlobby");
             return;
         }
-            //Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
-            // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-           
-            
-        
+        //Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
+        // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
+
         PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPoint.position, Quaternion.identity, 0);
-      
 
         //else
         //{
 
         //Debug.LogFormat("Ignoring scene load for {0}", SceneManagerHelper.ActiveSceneName);
-
-
-    }
+    }  
 
     public void LeaveRoom()
     {

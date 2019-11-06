@@ -41,7 +41,10 @@ using Photon.Realtime;
                 }
             }
             PhotonNetwork.NickName = defaultName;
-        }
+        //Debug.Log("PhotonNetwork.Nickname : " + PhotonNetwork.NickName);
+        //Debug.Log("defaultName : " + defaultName);
+        //did not produce any output
+    }
 
 
         #endregion
@@ -63,9 +66,11 @@ using Photon.Realtime;
                 return;
             }
             PhotonNetwork.NickName = value;
+        //Debug.Log("PhotonNetwork.Nickname : " + PhotonNetwork.NickName);
+        //Debug.Log("value : " + value);
 
-
-            PlayerPrefs.SetString(playerNamePrefKey, value);
+        PlayerPrefs.SetString(playerNamePrefKey, value);
+        //Debug.Log("playerNamePrefKey: " + playerNamePrefKey);
         }
 
 

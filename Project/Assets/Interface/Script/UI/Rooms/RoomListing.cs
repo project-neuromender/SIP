@@ -23,7 +23,7 @@ public class RoomListing : MonoBehaviour
         RoomInfo = roomInfo;
         _text.text = roomInfo.MaxPlayers + " , " + roomInfo.Name;
 
-        roomname = RoomInfo.Name;
+        roomname = roomInfo.Name;
 
         Debug.Log("Room Name : " + roomname);
     }
@@ -31,10 +31,10 @@ public class RoomListing : MonoBehaviour
     public void OnClick_Button()
     {
         //Debug.Log("Room Name : " + RoomInfo.Name);
-        Debug.Log("Room Name : " + roomname);
+        //Debug.Log("Room Name : " + roomname);
 
-        Debug.Log("Joining room in the list");
-        PhotonNetwork.JoinRoom(roomname, null);
-        Debug.Log("Room Listing Menu : Join Room");
+        //Debug.Log("Joining room in the list");
+        //PhotonNetwork.JoinRoom(roomname);
+        //Debug.Log("Room Listing Menu : Join Room");
     }
 }
